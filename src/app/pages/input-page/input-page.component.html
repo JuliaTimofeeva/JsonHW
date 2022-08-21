@@ -1,0 +1,18 @@
+<div class="input-page-container">
+  <form [formGroup]="form">
+    <mat-form-field class="full-width">
+      <mat-label>Input text</mat-label>
+      <textarea matInput formControlName="inputText" (input)="onInput()"></textarea>
+    </mat-form-field>
+    <div class="driver"></div>
+    <mat-form-field class="full-width">
+      <mat-label>Input JSON</mat-label>
+      <textarea matInput formControlName="inputJson" (input)="onInput()"></textarea>
+    </mat-form-field>
+  </form>
+  <app-text-preview [text]="result" ></app-text-preview>
+  <div class="button-container">
+    <button mat-raised-button color="primary" [disabled]="!result" (click)="onClick()">Go to saving</button>
+    <button mat-raised-button (click)="fillTestData()">Fill with test data</button>
+  </div>
+</div>

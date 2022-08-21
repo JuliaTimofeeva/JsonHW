@@ -1,0 +1,12 @@
+:host {
+  .save-page-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+  }
+  .full-width {
+    width: 100%;
+  }
+}

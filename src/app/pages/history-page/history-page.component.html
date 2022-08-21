@@ -1,0 +1,20 @@
+<div class="history-page-container">
+  <div class="title">History</div>
+  <ng-container *ngIf="(appFacade.history$ | ngrxPush).length > 0; else message">
+    <mat-card class="card full-width" *ngFor="let item of appFacade.history$ | ngrxPush">
+      <div>
+        <span class="description">File name: </span>
+        {{item.fileName}}
+      </div>
+      <div>
+        <span class="description">Text: </span>
+        {{item.text}}
+      </div>
+    </mat-card>
+    <button mat-raised-button color="primary" (click)="clearHistory()">Clear history</button>
+  </ng-container>
+  <ng-template #message>
+    <div>No history</div>
+  </ng-template>
+  <a mat-flat-button (click)="goHome()">Go to homescreen</a>
+</div>

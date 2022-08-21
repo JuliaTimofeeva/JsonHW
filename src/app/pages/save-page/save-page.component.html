@@ -1,0 +1,11 @@
+<div class="save-page-container">
+  <form [formGroup]="saveForm" (ngSubmit)="onSubmit()">
+    <mat-form-field class="full-width">
+      <mat-label>Input file name</mat-label>
+      <input formControlName="fileName" matInput />
+    </mat-form-field>
+    <button class="full-width" [disabled]="saveForm.invalid" mat-raised-button color="primary">Save</button>
+  </form>
+  <a mat-flat-button (click)="goBack()">Back</a>
+  <a mat-flat-button (click)="onClick()">Go to history</a>
+</div>

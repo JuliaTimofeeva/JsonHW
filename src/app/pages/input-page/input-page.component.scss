@@ -1,0 +1,30 @@
+:host {
+  .input-page-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    .driver {
+      margin: 1.25em 12px;
+      width: 1px;
+      background: gainsboro;
+    }
+    form {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      textarea {
+        height: 350px;
+      }
+    }
+    .full-width {
+      width: 100%;
+    }
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      width: 315px;
+    }
+  }
+}
